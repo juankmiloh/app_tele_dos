@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                montajesyprocesos.com
+        -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="shortcut icon" href="images/gps_icon.ico" type="image/vnd.microsoft.icon"\>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="estilos_css/estilos_index.css">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/ShortcutPlugin.js"></script>
+        <script type="text/javascript" src="js/Insomnia.js"></script>
+        <script src="js/Concurrent.Thread.js"></script>
+        <script type="text/javascript" src="./js/script_index.js"></script>
+        <script type="text/javascript" src="./js/script_index_validar_usuario.js"></script>
+        <title>INDEX APP</title>
+    </head>
+    <body>
+        <a name="arriba"></a> 
+        <!-- DIV's de imagen de carga oculto -->
+        <div class="fbback" style="z-index: 57;"></div>
+
+        <div class="container" id="fbdrag1">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="fb" style="z-index: 57;">
+                        <!--<span class="close" onclick="dragClose('fbdrag1')"></span>-->
+                        <div class="dheader">MONTAJES & PROCESOS M.P SAS</div>
+                        <div class="dcontent">
+                            <div style="text-align:center;padding-top:20px">
+                                <center>
+                                    <img src="./images/loading.gif" alt="Loading...">
+                                    <br><br>
+                                    <label style="color: black;" id="texto_carga"></label>
+                                </center>
+                            </div>
+                            <br>
+                            <!--<div style="padding-top:15px;text-align:center">
+                                <span class="buttonx" onclick="dragClose('fbdrag1')">Close</span>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <header>
+                <!-- Contenedor de la imagen banner y el título de la cabecera -->
+                <div class="row sombra_banner" id="top_home">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <center>
+                            <img src="./images/banner.jpg" class="img-responsive banner" alt="gps" style="height: 100px; width: 100%;">
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="row sombra" id="header">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <center><label id="label_cabecera">MÓDULO PRINCIPAL</label></center>
+                    </div>
+                </div>
+            </header>            
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <center>
+                        <h4><b>SELECCIONE UNA OPCIÓN<b></h4>
+                    </center>             
+                </div>
+            </div>
+            <hr>
+            <center>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <a href="./websites/ubicacion_persona.html">
+                            <button type="button" class="btn btn-success btn-lg boton" id="boton_prueba" onclick='window.plugins.insomnia.keepAwake();'><!--keepAwake(funcion para mantener encendida la pantalla cuando se ejecute el app)-->
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                INICIAR SERVICIOS
+                            </button> 
+                        </a>
+                    </div>
+                </div>         
+            </center>
+            <br>
+            <hr>
+            <div class="container">
+                <footer>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12" style="text-align: center;">
+                            <span style="color: #428bca;"><b>Proyecto - Teleinformática II</b></span>
+                            <br>
+                            <span id="fecha_footer" style="color: #428bca; font-size: 0.8em;"></span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <hr>
+            <table><tbody id="dataTable"></tbody></table> <!--Tabla creada para probar la conexion a internet-->
+        </div>
+    </body>
+</html>

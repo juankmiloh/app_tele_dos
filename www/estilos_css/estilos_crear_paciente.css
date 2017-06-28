@@ -1,0 +1,48 @@
+.sombra_banner{
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.sombra{
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+#label_cabecera{
+	color: white;
+}
+
+.centrar_label_cabecera{
+	padding-top: 0%;
+}
+
+#header{
+	height: 3.5em;
+	background-color: #5cb85c;
+	padding-top: 1.5%;
+}
+
+.centrar{
+	border: 1px solid;
+}
+
+/*Opciones para pantallas inferiores a 767px*/
+@media screen and (max-width: 767px){
+	.col-md-12 .banner{
+		height: 90px;
+	}
+
+	#label_cabecera{
+		padding-top: 0.6em;
+	}
+}
+
+/*Opciones para pantallas superiores a 768px*/
+@media screen and (min-width: 768px){
+	.col-md-12 .banner{
+		width: 55%;
+		height: 160px;
+	}
+}

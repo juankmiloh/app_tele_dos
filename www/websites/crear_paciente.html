@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+	<title>CREAR PACIENTE</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" href="../images/gps_icon.ico" type="image/vnd.microsoft.icon">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+	<script type="text/javascript" src="../js/ShortcutPlugin.js"></script>
+    <script type="text/javascript" src="../js/Insomnia.js"></script>
+	<link rel="stylesheet" type="text/css" href="../estilos_css/estilos_crear_paciente.css">
+	<script type="text/javascript" src="../js/script_cargar_codigo_paciente.js"/></script>
+	<script type="text/javascript" src="../js/script_crear_paciente.js"></script>
+</head>
+<body>
+	<div class="container-fluid contenedor">
+		<header>
+            <!-- Contenedor de la imagen banner y el título de la cabecera -->
+            <div class="row sombra_banner" id="top_home">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <center>
+                        <img src="../images/banner.jpg" class="img-responsive banner" alt="gps" style="height: 100px; width: 100%;">
+                    </center>
+                </div>
+            </div>
+            <br>
+            <div class="row sombra" id="header">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <center><label id="label_cabecera">MÓDULO PARA LA CREACIÓN DE USUARIOS</label></center>
+                </div>
+            </div>
+        </header>        
+    	<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<hr>
+				<center>
+					<h4><b>COMPLETE EL FORMULARIO</b></h4>
+				</center>
+				<hr>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4"></div>
+			<div class="col-xs-12 col-sm-12 col-md-4">
+				<div class="row">
+					<form id="formulario" method="post" action="javascript:crearPaciente()">
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<label for="txt_rol">TIPO USUARIO</label>
+							<input type="text" class="form-control" name="txt_rol" id="txt_rol" value="Paciente" readonly>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<label for="txt_codigo">CÓDIGO USUARIO</label><br>
+							<input title="Introduce un nombre" type="text" class="form-control" name="txt_codigo" id="txt_codigo" readonly>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<label for="txt_nombre_usuario">NOMBRE USUARIO</label>
+							<input type="text" class="form-control" name="txt_nombre_usuario" id="txt_nombre_usuario" readonly>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<label for="txt_cedula">CÉDULA</label>
+							<input type="number" class="form-control" name="txt_cedula" id="txt_cedula" placeholder="Ingrese su cédula" required>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<label for="txt_nombre">NOMBRE</label>
+							<input type="text" class="form-control" name="txt_nombre" id="txt_nombre" placeholder="Ingrese su nombre" required>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<label for="txt_apellido">APELLIDO</label>
+							<input type="text" class="form-control" name="txt_apellido" id="txt_apellido" placeholder="Ingese su apellido" required>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<label for="txt_telefono">TELÉFONO</label>
+							<input type="number" class="form-control" name="txt_telefono" id="txt_telefono" placeholder="Ingese su número de teléfono" required>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<label for="txt_correo">E-MAIL</label>
+							<input type="email" class="form-control" name="email" id="txt_correo" placeholder="Ingrese su e-mail" required>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<hr>
+							<center>
+								<button type="submit" class="btn btn-success btn-lg sombra" id="boton" onclick='window.plugins.Shortcut.CreateShortcut("app_tele2");'>
+								    <span class="glyphicon glyphicon-floppy-saved"></span>
+								    Guardar Usuario
+								</button>
+							</center>
+							<hr>
+						</div>							
+					</form>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4"></div>
+		</div>
+		<table><tbody id="dataTable"></tbody></table> <!--Tabla creada para probar la conexion a internet-->
+	</div>
+</body>
+</html>

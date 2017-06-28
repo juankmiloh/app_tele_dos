@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  	<title>INDEX / POSICIÓN</title>
+  	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  	<script src="../js/jquery.js"></script>
+  	<script src="../js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="../estilos_css/estilos_ubicacion_temporal.css">
+  	<link rel="stylesheet" type="text/css" href="../estilos_css/estilos_ubicacion_persona.css">
+  	<script type="text/javascript" src="../js/script_ubicacion_temporal.js"></script>
+</head>
+<body>
+	<!-- DIV's de imagen de carga oculto -->
+    <div class="fbback" style="z-index: 57;"></div>
+    
+    <div class="container" id="fbdrag1">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="fb" style="z-index: 57;">
+                    <!--<span class="close" onclick="dragClose('fbdrag1')"></span>-->
+                    <div class="dheader">Proyecto - Teleinformática II</div>
+                    <div class="dcontent">
+                        <div style="text-align:center;padding-top:20px">
+                            <center>
+                                <img src="../images/loading.gif" alt="Loading...">
+                                <br><br>
+                                <label style="color: black;">Obteniendo ubicación...Espere</label>
+                            </center>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+	<div class="container-fluid">
+		<header>
+            <!-- Contenedor de la imagen banner y el título de la cabecera -->
+            <div class="row sombra_banner" id="top_home">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <center>
+                        <img src="../images/banner.jpg" class="img-responsive banner" alt="gps" style="height: 100px; width: 100%;">
+                    </center>
+                </div>
+            </div>
+            <br>
+            <div class="row sombra" id="header">
+                <div class="col-xs-6 col-md-6" style="width: 60%;">
+                    <label style="color: white; padding-top: 0.5em; padding-left: 0.5em;">ADMINISTRADOR</label>
+                </div>
+                <div class="col-xs-6 col-md-6" style="text-align: right; width: 40%;">
+                    <a href="./cerrar_sesion_administrador.php">
+                        <button type="button" class="btn btn-primary btn-sm sombra" id="boton">
+                            <span class="glyphicon glyphicon-lock"></span>
+                            Cerrar Sesión
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <br>
+		<hr>
+    	<center>
+	     	<div class="row">
+		        <div class="col-xs-12 col-sm-12 col-md-12">
+		        	<h4><b>POSICIÓN DEL PACIENTE</b></h4>
+		        </div>
+		    </div>
+		    <hr>
+		    <div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6" style="text-align: left;">
+					<label for="id_latitud">LATITUD</label>
+					<input class="form-control" id="id_latitud" name="latitud" type="text" value="Espere...">
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="text-align: left;">
+					<label for="id_longitud">LONGITUD</label><br>
+					<input class="form-control" id="id_longitud" name="longitud" type="text" value="Espere...">
+				</div>
+			</div>
+	        <hr>
+	        <div class="container">
+                <footer>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12" style="text-align: center;">
+                            <span style="color: #428bca;"><b>Proyecto - Teleinformática II</b></span>
+                            <br>
+                            <span id="fecha_footer" style="color: #428bca; font-size: 0.8em;"></span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+		</center>
+    </div>
+</body>
+</html>
